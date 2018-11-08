@@ -1,0 +1,8 @@
+<IfModule mod_rewrite.c>
+   RewriteEngine on 
+   RewriteRule    ^$ web/  
+   RewriteRule    (.*) web/$1
+</IfModule>
+<IfModule pagespeed_module>
+	ModPagespeed off
+</IfModule>

@@ -1,0 +1,14 @@
+<?php
+    echo('<div class="col s12 m3"><div class="card install-process">');
+    $steps_name = array("Welcome", "Installation", "Setup the Servers", "Servers Management", "Complete Installation");
+    for($i = 1; $i<= 5; $i++){
+        if($i < $step)
+            echo('<p class="green white-text"><i class="left material-icons">done</i>'.$steps_name[$i-1].'</p>');
+        elseif ($i == $step)
+            echo('<p class="blue white-text"><i class="left  material-icons">change_history</i>'.$steps_name[$i-1].'</p>');
+        elseif ($i > $step)
+            echo('<p><i class="left material-icons grey-text">keyboard_arrow_right</i>'.$steps_name[$i-1].'</p>');
+        echo ('<div class="divider"></div>');
+    }
+    echo('</div><img width="100%" src="img/support.png" class="responsive-img z-depth-2"></div>');
+?>
